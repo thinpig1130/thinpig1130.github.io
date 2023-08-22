@@ -1,0 +1,1 @@
+import{_ as c}from"./nuxt-link.3d6d4f2e.js";import{_,c as l,a as t,b as o,w as n,o as r,d as a}from"./entry.aebc533f.js";const s={};function u(d,i){const e=c;return r(),l("ul",null,[t("li",null,[o(e,{to:"guide"},{default:n(()=>[a("가이드")]),_:1})]),t("li",null,[o(e,{to:"iphone14"},{default:n(()=>[a("폰")]),_:1})])])}const p=_(s,[["render",u]]);export{p as default};
