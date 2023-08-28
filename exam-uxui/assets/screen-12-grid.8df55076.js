@@ -1,0 +1,1 @@
+import{_ as s,c,o as _,a as e}from"./entry.9d413880.js";const t={},n={class:"screen-12-grid"},o=e("div",{class:"grid"},null,-1),r=e("div",{class:"grid"},null,-1),d=[o,r];function a(i,l){return _(),c("div",n,d)}const f=s(t,[["render",a]]);export{f as default};
