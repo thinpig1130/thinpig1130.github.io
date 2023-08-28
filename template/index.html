@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title th:text="#{CHAT.TITLE.LABEL}">재난지원금 환수 사전통지서</title>
+    <link rel="stylesheet" th:href="@{/viewer/css/layout.css}" href="./css/layout.css">
+    <link rel="stylesheet" th:href="@{/viewer/css/webfonts.css}" href="./css/webfonts.css">
+    <link rel="stylesheet" th:href="@{/viewer/css/common.css}" href="./css/common.css">
+    <link rel="stylesheet" th:href="@{/viewer/css/bill.css}" href="./css/bill.css">
+</head>
+<body>
+<div class="container bill main type__s_bis">
+    <div class="bill_head">
+        <img th:src="@{/viewer/img/common/logo-sosang.png}" src="./img/logo-sosang.png" alt="logo">
+    </div>
+    <h1 class="bill_title">
+        <span th:text="|재난지원금${지원금명}|">재난지원금{{지원금명}}}</span>
+        <span>환수 사전통지서</span>
+    </h1>
+    <p class="notice">
+        ｢행정절차법｣ 제21조제1항에 따라 우리부가 하고자 하는 처분의 내용을 아래와 같이 사전통지하오니 당사자 등은 아래 의견제출처로
+        <strong>2022.8.16(화)</strong>까지 의견을 제출하시기 바랍니다.
+    </p>
+    <div class="bill_table">
+        <h2>처분 상세 내역</h2>
+        <table>
+            <tr>
+                <th>예정된<br>처분의 제목</th>
+                <td>
+                    <span>{{지원금명}}</span>
+                    <span> 환수 및 환수금액에 대한 처분</span>
+                </td>
+            </tr>
+            <tr>
+                <th>대표자 성명</th>
+                <td>
+                    <span>{{대표자명}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>상호명(법인명)</th>
+                <td>
+                    <span>{{사업명}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>사업자등록번호</th>
+                <td
+                    <span>{{사업자등록번호}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>자택 주소</th>
+                <td>
+                  <p>
+                    <span>{{자택주소}}</span>
+                  </p>
+                </td>
+            </tr>
+            <tr>
+                <th>처분의 원인이 <br> 되는 사실</th>
+                <td>
+                  <p>
+                    재난지원금(<span>{{지원금명}}</span>) 기준 요건 미충족 <br> (<span>{{지원금명}}</span> 지급기준은 ‘<span>{{폐업일기준}}</span>일 기준
+                    폐업상태가 아닐 것’이나, 귀 사업체는 폐업일이 <span>{{폐업일자}}</span>일)
+                  </p>
+                </td>
+            </tr>
+            <tr>
+                <th>처분하고자<br> 하는 내용</th>
+                <td>
+                    {{지원금명}} 환수 및 환수금액({{환수예정금액}}원) 납부
+                </td>
+            </tr>
+            <tr>
+                <th>전자납부번호<br>(지방세입계좌)</th>
+                <td>
+                    ｢보조금관리에 관한 법률｣ 제33조
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="bill_table">
+        <h2>재난지원금{{지원금명}}<br>환수금액 납입고지서</h2>
+        <table>
+            <tr>
+                <th>사업장명</th>
+                <td>
+                    {{사업명}}
+                </td>
+            </tr>
+            <tr>
+                <th>신청접수번호</th>
+                <td>
+                    <span>{{지원금명}}, {{접수}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>납입계좌번호</th>
+                <td>
+                    <span>신한은행 {{가상계좌}}</span>
+                </td>
+            </tr>
+            <tr>
+                <th>예금주</th>
+                <td>
+                    <span>소상공인시장진흥공단</span>
+                </td>
+            </tr>
+            <tr>
+                <th>납입금액</th>
+                <td>
+                    {{환수예정금액}} 원
+                </td>
+            </tr>
+            <tr>
+                <th>납부방법</th>
+                <td>
+                    <span>지정된 납입계좌번호로 직접 납부(인터넷뱅킹, 모바일뱅킹, 텔레뱅킹을 이용한 계좌 이체)</span>
+                </td>
+            </tr>
+            <tr>
+                <th>처분하고자<br> 하는 내용</th>
+                <td>
+                    {{지원금명}} 환수 및 환수금액({{환수예정금액}}원) 납부
+                </td>
+            </tr>
+            <tr>
+                <th>납부기한</th>
+                <td>
+                    2023 년 10 월 20 일까지
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="bill_table">
+        <h2>의견제출</h2>
+        <table>
+            <tr>
+                <th class="marge-2" colspan="2">
+                    제출 기관 정보 및 제출처
+                </th>
+            </tr>
+            <tr>
+                <th>기관명</th>
+                <td>
+                    <span>소상공인시장진흥공단</span>
+                </td>
+            </tr>
+            <tr>
+                <th>담당부서명</th>
+                <td>
+                    <span>회복지원실 <br> (042-363-6867)</span>
+                </td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td>
+                    <span>대전광역시 중구 보문로 246 대림빌딩 11층</span>
+                </td>
+            </tr>
+            <tr>
+                <th>제출처<br>(온라인제출)</th>
+                <td>
+                    <span>소상공인재난지원금.kr<br>(환수 – 본인인증 - 의견제출)</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="marge-2 tb-footer" colspan="2">
+                    제출기한: 2023년 07월 20일까지
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div class="notice ul-type">
+        <p><strong>*</strong> 환수금액 납입고지서 별 납입계좌번호가 상이하니 이 점 유의하시기 바랍니다.
+        <p>
+        <p><strong>*</strong> 문의전화: 국번 없이 1533-0100, 042-363-6867
+    </div>
+    <div class="bill_date">
+        2022년 8월 4일
+    </div>
+    <div class="bill_seal">
+        <span>소상공인시장진흥공단</span><span>(직인생략)</span>
+    </div>
+    <div class="button_bar">
+        <button type="button" class="move_btn">
+            <span>의견제출 신청하기</span>
+            <div class="btn_next_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22px" height="22px">
+                    <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"></path>
+                </svg>
+            </div>
+        </button>
+    </div>
+    <h2>처분사실 및 의견제출 유의사항</h2>
+    <h3>
+        <div class="left_icon">
+            <div></div>
+            <div></div>
+        </div>
+        처분사실 및 의견제출 유의사항
+    </h3>
+    <div class="notice ol-type">
+        <p>
+            <strong>1</strong>
+            귀 사업체는 {{지원금명}} 신청 당시 폐업상태로 추정되나, 폐업신고를 하지 않고 재난지원금을 받았으며 사후 확인결과 폐업신고일이 {{지원금명}} 폐업 기준에 충족되지 않음을 확인하였습니다.
+        </p>
+        <p>
+            <strong>2</strong>
+            이는 보조금법 제33조의(보조금수령자에 대한 보조금의 환수) 1항의 3조「보조금을 지급받기 위한 요건을 갖추지 못한 경우」에 해당됩니다.
+        </p>
+        <p>
+            <strong>3</strong>
+            이에 관련 법령에 따라 지원금 환수(반환, 처분) 사실을 안내드리며, 귀 사업체가 {{지원금명}} 공고상 기준일에 폐업상태가 아니었음을 객관적으로 소명할 수 있는 경우 의견제출 방법을 통해
+            증빙자료를 제출해주시기 바랍니다.
+        </p>
+        <p>
+            <strong>4</strong>
+            귀하는 위 사항에 대하여 온라인(PC, 모바일)으로 의견제출을 할 수 있으며, 지급요건 확인이 가능한 자료 등 주장을 입증할 증거자료를 함께 제출할 수 있습니다.
+        </p>
+        <p>
+            <strong>5</strong>
+            의견제출 기한 내에 의견을 제출하지 아니하는 경우에는 의견이 없는 것으로 간주되며, 사전통지 기한 내에 해당 금액을 납부(아래 납입고지서 활용)할 경우 환수 절차는 종료됩니다.
+        </p>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    const toggleBtn = document.querySelector('.move_btn');
+    toggleBtn.addEventListener('click', function () {
+        document.querySelector('.main').style.display = 'none';
+        document.querySelector('.detail').style.display = 'block';
+    });
+</script>
